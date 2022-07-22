@@ -1,0 +1,146 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: "Montserrat";
+  }
+  section {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(blueprints.jpg);    
+  }
+
+  .avatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; 
+    position: relative;
+    /* top: 370px; */
+    left: calc(50% - 50px);
+    background-color: rgba(51, 70, 156, 0.0) ;
+}
+  .container {   /* Main Box   */
+    max-width: 700px;
+    width: 90%;
+    padding: 20px;
+    box-shadow: 0px 0px 20px #00000020;
+    border-radius: 8px;
+    background-color: rgba(155, 164, 206, 0.9);
+    ;
+  }
+
+  .checkboxgroup{
+    width: 20em;
+    overflow: auto;
+}
+.checkboxgroup p{
+    width: 7em;
+    text-align: right;
+}
+.checkboxgroup label{
+    width: 12em;
+    float: right;
+}
+
+/*
+  .check-box {
+
+    position:relative;
+    left:-50%;
+  }
+
+  .box1 {
+  width: 15px;
+  height: 15px;
+  padding: 0;
+  margin: 0;
+  vertical-align: bottom;
+  position: relative;
+  top: -10px;
+  }
+*/
+
+
+  .step {
+    display: none;
+  }
+  .step.active {
+    display: block;
+  }
+  .form-group {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .form-group input {
+    width: 100%;
+    border: 1.5px solid rgba(128, 128, 128, 0.418);
+    padding: 5px;
+    font-size: 18px;
+    margin-top: 5px;
+    border-radius: 4px;
+  }
+  
+  button.next-btn,
+  button.previous-btn,
+  button.submit-btn {
+    float: right;
+    margin-top: 20px;
+    padding: 10px 30px;
+    border: none;
+    outline: none;
+    background-color: rgb(32, 151, 255);
+    font-family: "Montserrat";
+    font-size: 18px;
+    cursor: pointer;
+    /* text-align: right; */
+  }
+  button.previous-btn {
+    float: left;
+  }
+
+
+
+  button.add-btn{
+    float:right;
+    margin-top: 20px;
+    padding: 10px 30px;
+    border: none;
+    outline: none;
+    background-color: rgb(32, 151, 255);
+    font-family: "Montserrat";
+    font-size: 18px;
+    cursor: pointer;
+  }
+
+  button.add-btn2{
+    float:right;
+    margin-top: 20px;
+    padding: 10px 30px;
+    border: none;
+    outline: none;
+    background-color: rgb(32, 151, 255);
+    font-family: "Montserrat";
+    font-size: 18px;
+    cursor: pointer;
+  }
+  button.submit-btn {
+    background-color: aquamarine;
+  }
+  button.load-btn {
+    float: left;
+    margin-top: 20px;
+    padding: 10px 30px;
+    border: none;
+    outline: none;
+    background-color: rgb(32, 151, 255);
+    font-family: "Montserrat";
+    font-size: 18px;
+    cursor: pointer;
+    /* text-align: right; */
+  }
+  

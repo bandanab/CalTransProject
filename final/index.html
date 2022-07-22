@@ -1,0 +1,387 @@
+<html>
+ <head>
+
+ </head>
+
+ <link rel="stylesheet" type="text/css" href="style.css">
+ 
+
+<section>
+    <div class="container">
+      <form>
+  
+        <div class="step step-1 active">
+          
+            <img src="hardhat.png" class="avatar">
+                      
+            <div class="form-group">
+                <label for="projectDesc"><h3>Project Description</h3></label>
+                <input type="text" id="projectDesc" placeholder="Enter Project Description" value="">
+            </div>
+
+            <div class="form-group">
+                <label for="projectName"><h3>Project Name</h3></label>
+                <input type="text" id="projectName" placeholder="Enter Project Name">
+            </div>
+
+           
+            <div class="load" style=float:right>
+              <button type="button" class="load-btn">Load</button>
+            </div>
+            <div class="form-group">
+                <label for="contract"><h3>Contract Number/CO/RTE/PM</h3></label>
+                
+                <input type="text" id="contract" placeholder="Enter Contract Number">
+            </div>
+
+            <div class="form-group">     
+                <label for="District"><h3>District</label>
+                <select id="District" onchange="getSelectValue();">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="wdid"><h3>WDID Number</h3></label>
+                <input type="text" id="wdid" placeholder="Enter WDID Number">
+            </div>
+
+          <button type="button" class="next-btn">Next</button>
+        </div>
+  
+        <div class="step step-2">
+          <div class="form-group">
+            <label for="iqareviewer"><h3>IQA Reviewer</h3></label>
+            <input type="text" id="iqareviewer" name="iqa-reviewer">
+          </div>
+
+          <div class="form-group">
+            <label for="reviewDate"><h3>Review Date</h3></label>
+            <input type="datetime-local" id="reviewDate" name="review-Date">
+          </div>
+
+          <div class="form-group">
+            <label for="residentEngineer"><h3>Resident Engineer (RE)</h3></label>
+            <input type="text" id="residentEngineer" name="resident-Engineer">
+          </div>
+
+          <div class="form-group">
+            <label for="rePhoneNumber"><h3>RE Phone Number</h3></label>
+            <input type="phone number" id="rePhoneNumber" name="rePhone-number">
+          </div>
+
+          <div class="form-group">
+            <label for="reviewParticipants"><h3>Review Participant(s)</h3></label>
+            <input type="text" id="reviewParticipants" name="review-participants">
+          </div>
+
+          <div class="form-group">
+            <label for="constructionCompany"><h3>Construction Company</h3></label>
+            <input type="text" id="constructionCompany" name="construction-Company">
+          </div>
+
+          <div class="form-group">
+            <label for="waterPollutionManager"><h3>Water Pollution Manager</h3></label>
+            <input type="text" id="waterPollutionManager" name="waterPollution-Manager">
+          </div>
+
+          <button type="button" class="previous-btn">Prev</button>
+          <button type="button" class="next-btn">Next</button>
+        </div>
+  
+        <div class="step step-3">
+          <div class="form-group">
+            <label for="conditionsWeather"><h3>Weather Conditions</h3></label>
+            <input type="text" id="conditionsWeather" name="conditions-Weather">
+          </div>
+
+          <div class="form-group">     
+            <label for="riskLevel"><h3>Project Risk Level / Tahoe CGP</h3></label>
+            <select id="riskLevel" onchange="getSelectValue();">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">Tahoe</option>
+              </select>
+          </div>
+
+          <div class="form-group">
+            <label for="waterBody"><h3>Receiving Water Body(s)</h3></label>
+            <input type="text" id="waterBody" name="waterBody-recieving">
+          </div>
+
+          <div class="form-group">
+            <label for="percentComplete"><h3>Percent Complete By Time</h3></label>
+            <input type="text" id="percentComplete" name="percent-Complete">
+          </div>
+
+          <div class="form-group">
+            <label for="disturbedSoilArea"><h3>Total Disturbed Soil Area (DSA) (ACRES)</h3></label>
+            <input type="text" id="disturbedSoilArea" name="soilArea-Disturbed">
+          </div>
+
+          <div class="form-group">
+            <label for="activeDSA"><h3>Active DSA (ACRES)</h3></label>
+            <input type="text" id="activeDSA" name="DSA-active">
+          </div>
+
+          <div class="form-group">
+            <label for="inactiveDSA"><h3>Inactive DSA (ACRES)</h3></label>
+            <input type="text" id="inactiveDSA" name="DSA-inactive">
+          </div>
+
+          <button type="button" class="previous-btn">Prev</button>
+          <button type="button" class="next-btn">Next</button>
+          
+        </div>
+
+
+        <div class="step step-4">
+          <div class="form-group">
+          </div>
+
+          <div class="form-group">     
+            <label for="SWPPPorWPCP"><h3>SWPPP Or WPCP</h3></label>
+            <select id="SWPPPorWPCP" onchange="getSelectValue();">
+                <option value="1">None</option>
+                <option value="2">SWPPP</option>
+                <option value="3">WPCP</option>
+             
+            </select>
+          </div>
+
+          <h3>
+            <label for="PLACS">RWQCB(S) - Select ALL that apply</label>
+          </h3><br/>       
+
+          <div>
+            <input type="checkbox" />North Coast - Region 1<br/>
+            <input type="checkbox" />San Francisco - Region 2<br/>
+            <input type="checkbox" />Central Coast - Region 3<br/>
+            <input type="checkbox" />Los Angeles - Region 4<br/>
+            <input type="checkbox" />Central Valley - Region 5 Sacramento<br/>
+            <input type="checkbox" />Central Valley - Region 5 Fresno<br/>
+            <input type="checkbox" />Central Valley - Region 5 Redding<br/>
+            <input type="checkbox" />Lahontan - Region 6 - South Lake Tahoe<br/>
+            <input type="checkbox" />Lahontan - Region 6 - Victorville<br/>
+            <input type="checkbox" />Colorado River - Region 7<br/>
+            <input type="checkbox" />Santa Ana - Region 8<br/>
+            <input type="checkbox" />San Diego - Region 9<br/>
+            
+          </div><br/>
+
+            <h3>
+              <label for="PLACS">PLACS (Permits, Licenses, Agreements, Certifications) SPECIFYING TEMPORARY BMP REQUIREMENTS - Select ALL that apply</label>
+            </h3><br/>       
+
+          <div>
+                <input type="checkbox" />U.S. Army Corps of Engineer - Federal CWA Section 404 Dredge and Fill Permit<br/>
+                <input type="checkbox" />U.S. Fish and Wildlife Service - Federal ESA Section 7 - Biological Opinion for flora and fauna<br/>
+                <input type="checkbox" />U.S. National Marine Fisheries Service - Federal ESA Section 7 - Biological Opinion for fisheries<br/>
+                <input type="checkbox" />California Department of Fish and Wildlife - California ESA Incidental Take Permit<br/>
+                <input type="checkbox" />California RWQCB - Federal CWA Section 401 Water Quality Certification<br/>
+                <input type="checkbox" />California Department of Fish and Wildlife Service - California Fish and Game Code Section 1602 Lake or Streambed Alteration Agreement<br/>
+                <input type="checkbox" />California Coastal Commission - Coastal Development Permit<br/>
+                <input type="checkbox" />San Francisco Bay Conservation and Development Commission - San Francisco Bay Conservation and Development Permit<br/>
+                <input type="checkbox" />California Resources Agency - Flood Protection Board Encroachment Permit<br/>
+                <input type="checkbox" />California SWRCB - Statewide General WDRs for Discharges to Land with a Low Threat to Water Quality<br/>
+                <input type="checkbox" />California RWQCB - Waste Discharge Requirements for Dewatering and Other Low Threat Discharges to Surface Waters<br/>
+                <input type="checkbox" />California State Lands Commission - PRC 1766.9 Public Agency Lease Agreement<br/>
+                <input type="checkbox" /><input type="text" id="PLACOther" name="PLACOther" placeholder="Other - enter here"><br/>
+          </div><br/>
+
+            <p><h3>Oversight Project?<h3</p>
+            <div style=position:relative >
+              <input type="radio" name="oversightProject" id="oversightProject" value="y" />Yes
+              <input type="radio" name="oversightProject" id="oversightProject" value="n" />No
+            </div> 
+
+            <div class="form-group">
+              <label for="leadAgency">Lead Agency</label>
+              <input type="text" id="leadAgency" name="leadAgency">
+            </div>
+        
+            <button type="button" class="previous-btn">Prev</button>
+            <button type="button" class="next-btn">Next</button>
+        </div>
+
+
+
+        <div class="step step-5">
+
+            <div style=float:right>
+              <button type="button" class="add-btn">Add</button>
+            </div>
+
+          <div class="form-group">     
+              <label for="adminCategory"><h3>Administrative Category</h3></label>
+              <select id="adminCategory" onchange="getSelectValue();">
+                <option value="1">Plans and Permits</option>
+                <option value="2">Training</option>
+                <option value="3">SMARTS</option>
+                <option value="4">Active Treatment Systems</option>
+                <option value="3">Monitoring and Reporting</option>
+                <option value="4">Tahoe CGP-Specific Requirements</option>
+              </select>
+          </div>
+
+
+          <div class="form-group">     
+            <label for="checklistQuestions"><h3>Checklist Question Number</h3></label>
+            <select id="checklistQuestions" onchange="getSelectValue();">
+              <option value="1">Plans and Permits</option>
+              <option value="2">Training</option>
+              <option value="3">SMARTS</option>
+              <option value="4">Active Treatment Systems</option>
+              <option value="3">Monitoring and Reporting</option>
+              <option value="4">Tahoe CGP-Specific Requirements</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="observationStormwater"><h3>Observation</h3></label>
+            <input type="text" id="observationStormwater" name="waterBody-recieving">
+          </div>
+
+          <div class="form-group">
+            <label for="standardReference"><h3>Standard Reference</h3></label>
+            <input type="text" id="standardReference" name="standard-Reference">
+          </div>
+
+          <div class="form-group">
+            <label for="standardStormwater"><h3>Standard</h3></label>
+            <input type="text" id="standardStormwater" name="standard-Stormwater">
+          </div>
+
+          
+          <button type="button" class="previous-btn">Prev</button>
+                    
+        
+          
+          
+          <button type="button" class="next-btn">Next</button>
+          
+        </div>
+      
+
+
+
+        
+       <div class="step step-6">
+
+          <div style=float:right>
+            <button type="button" class="add-btn2">Add</button>
+          </div>
+
+          <!---
+
+          <div class="form-group">     
+              <label for="bmpCategory"><h3>BMP Category</h3></label>
+              <select id="bmpCategory" onchange="getSelectValue();">
+                <option value="1">None</option>
+                <option value="2">Soil Stabilization</option>
+                <option value="3">Sediment Control</option>
+                <option value="4">Tracking Control</option>
+                <option value="3">Wind Erosion Control</option>
+                <option value="4">Non-Storm Water</option>
+                <option value="4">Waste Management</option>
+              </select>
+          </div>
+
+
+          <div class="form-group">     
+            <label for="bmpType"><h3>BMP Type</h3></label>
+            <select id="bmpType" onchange="getSelectValue();">
+              <option value="1">Plans and Permits</option>
+              <option value="2">Training</option>
+              <option value="3">SMARTS</option>
+              <option value="4">Active Treatment Systems</option>
+              <option value="3">Monitoring and Reporting</option>
+              <option value="4">Tahoe CGP-Specific Requirements</option>
+            </select>
+          </div>
+
+          <div class="form-group">     
+            <label for="bmpChecklistQuestion"><h3>Checklist Question Number</h3></label>
+            <select id="bmpChecklistQuestion" onchange="getSelectValue();">
+              <option value="1">Plans and Permits</option>
+              <option value="2">Training</option>
+              <option value="3">SMARTS</option>
+              <option value="4">Active Treatment Systems</option>
+              <option value="3">Monitoring and Reporting</option>
+              <option value="4">Tahoe CGP-Specific Requirements</option>
+            </select>
+          </div>
+          -->
+         
+
+          <!--   TESTING HERE   -->
+          
+          <h3>BMP Category: </h3><select name="subject" id="subject">
+            <option value="" selected="selected">BMP Category</option>
+          </select>
+          <br><br>
+          <h3>BMP Type: </h3><select name="topic" id="topic">
+            <option value="" selected="selected">Select BMP Category First</option>
+          </select>
+          <br><br>
+          <h3>Question Number: </h3><select name="chapter" id="chapter">
+            <option value="" selected="selected">Select BMP Type First</option>
+          </select>
+          <br><br>
+
+
+
+
+
+          <!--   END TEST     -->
+
+          <div class="form-group">
+            <label for="constructionLocation"><h3>Location</h3></label>
+            <input type="text" id="constructionLocation" name="construction-Location">
+          </div>
+
+          <div class="form-group">
+            <label for="constructionStandardReference"><h3>Standard Reference</h3></label>
+            <input type="text" id="constructionStandardReference" name="constructionStandard-Reference">
+          </div>
+
+          <div class="form-group">
+            <label for="standardConstruction"><h3>Standard</h3></label>
+            <input type="text" id="standardConstruction" name="standard-Construction">
+          </div>
+
+          
+          <button type="button" class="previous-btn">Prev</button>
+                    
+        
+          
+          
+          <!--<button type="button" class="next-btn">Next</button>  -->
+          <button type="submit" class="submit-btn">Submit</button>
+        </div>
+
+
+      </form>
+    </div>
+  </section>
+
+
+ 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script type = "text/javascript" src = "index.js"> </script>
+
+
+  </html>
